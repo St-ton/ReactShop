@@ -1,0 +1,19 @@
+.nav {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  background-color: #34495e;
+}
+
+/* .nav a {
+  padding: 5px 10px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+} */
+
+/* .nav .active {
+  border: 2px solid rgb(200, 90, 90);
+} */

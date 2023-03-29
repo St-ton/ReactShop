@@ -1,0 +1,30 @@
+.container {
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid #34495e;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 0 10px gray;
+  border-radius: 5px;
+}
+
+.container input {
+  outline: #34495e;
+  border: 1px solid #34495e;
+  padding: 10px 20px;
+  width: 55%;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.container select {
+  width: 150px;
+  border: 1px solid #34495e;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.container select:focus {
+  border: 2px solid #34495e;
+}

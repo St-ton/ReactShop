@@ -1,0 +1,6 @@
+.basket_container {
+  max-width: 900px;
+  margin: 10px auto;
+  display: grid;
+  gap: 10px;
+}

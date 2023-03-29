@@ -1,0 +1,44 @@
+.nav {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+  font-size: 22px;
+  background-color: lightgray;
+  padding: 0;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: blue;
+  line-height: 1;
+  background-color: transparent;
+}
+
+.nav a:after {
+  display: block;
+  content: " ";
+  height: 2px;
+  width: 0%;
+  background-color: blue;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav a:hover:after,
+.nav a:focus:after {
+  width: 100%;
+  color: red;
+}
+
+.nav a:hover {
+  color: red;
+  box-shadow: 0 0 25px rgba(255, 2557, 255, 0.2);
+}
+
+.nav .active {
+  color: red;
+}

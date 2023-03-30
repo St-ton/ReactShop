@@ -36,34 +36,51 @@ export const categoryFilterAction = (payload) => ({
 });
 
 export const productsReducer = (state = defaultState, action) => {
-  if (action.type === PRODUCTS_LOAD) {
-    return action.payload.map((item) => ({ ...item, show: true }));
-  } else if (action.type === PRODUCTS_SEARCH_FILTER) {
-    return state.map((item) => ({
-      ...item,
-      show: item.title.toLowerCase().startsWith(action.payload.toLowerCase()),
-    }));
-  } else if (action.type === PRODUCTS_RESET_FILTER) {
-    return state.map((item) => ({ ...item, show: true }));
-  } else if (action.type === PRODUCTS_SORT_PRICE_FILTER) {
-    if (action.payload === "priceup") {
-      return [...state].sort((a, b) => a.price - b.price);
-    } else if (action.payload === "pricedown") {
-      return [...state].sort((a, b) => b.price - a.price);
-    }
-  } else if (action.type === PRODUCTS_SORT_NAME_FILTER) {
-    console.log(state);
-    if (action.payload === "name-az") {
-      return [...state].sort((a, b) => a.title.localeCompare(b.title));
-    } else if (action.payload === "name-za") {
-      return [...state].sort((a, b) => b.title.localeCompare(a.title));
-    }
-  } else if (action.type === CATEGORY_FILTER) {
-    return state.map((item) => ({
-      ...item,
-      show: action.payload === "all" ? true : item.category === action.payload,
-    }));
-  }
+  switch (action.type) {
+    case PRODUCTS_LOAD:
+      return action.payload.map((item) => ({ ...item, show: true }));
 
-  return state;
+    case PRODUCTS_SEARCH_FILTER:
+      return state.map((item) => ({
+        ...item,
+        show: item.title.toLowerCase().startsWith(action.payload.toLowerCase()),
+      }));
+
+    case PRODUCTS_RESET_FILTER:
+      return state.map((item) => ({ ...item, show: true }));
+
+    case PRODUCTS_SORT_PRICE_FILTER:
+      switch (action.payload) {
+        case "priceup":
+          return [...state].sort((a, b) => a.price - b.price);
+
+        case "pricedown":
+          return [...state].sort((a, b) => b.price - a.price);
+
+        default:
+          return state;
+      }
+
+    case PRODUCTS_SORT_NAME_FILTER:
+      switch (action.payload) {
+        case "name-az":
+          return [...state].sort((a, b) => a.title.localeCompare(b.title));
+
+        case "name-za":
+          return [...state].sort((a, b) => b.title.localeCompare(a.title));
+
+        default:
+          return state;
+      }
+
+    case CATEGORY_FILTER:
+      return state.map((item) => ({
+        ...item,
+        show:
+          action.payload === "all" ? true : item.category === action.payload,
+      }));
+
+    default:
+      return state;
+  }
 };

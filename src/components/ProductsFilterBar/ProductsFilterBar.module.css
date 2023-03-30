@@ -20,10 +20,11 @@
   font-size: 16px;
 }
 
-/* .container select option {
-  color: #34495e;
-  font-size: 16px;
-} */
+.container select > option {
+  line-height: inherit;
+  line-height: 2em;
+  padding: 15px;
+}
 
 .container select:focus {
   border: 2px solid #34495e;

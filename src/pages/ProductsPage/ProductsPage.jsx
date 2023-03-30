@@ -18,7 +18,11 @@ export default function ProductsPage() {
     if (category === undefined) {
       return products;
     }
-    return products.filter((item) => item.category === category);
+    // return products.filter((item) => item.category === category);
+    const categoryProducts = products.filter(
+      (item) => item.category === category
+    );
+    return categoryProducts.lenght === 0 ? categoryProducts : "... is empty";
   });
   // console.log(products);
   return (

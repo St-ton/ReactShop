@@ -1,4 +1,5 @@
 const defaultState = [];
+
 const PRODUCTS_LOAD = "PRODUCTS_LOAD";
 const PRODUCTS_SEARCH_FILTER = "PRODUCTS_SEARCH_FILTER";
 const PRODUCTS_RESET_FILTER = "PRODUCTS_RESET_FILTER";
@@ -73,6 +74,7 @@ export const productsReducer = (state = defaultState, action) => {
           return state;
       }
 
+    // original
     case CATEGORY_FILTER:
       return state.map((item) => ({
         ...item,

@@ -18,23 +18,32 @@ export default function ProductsPage() {
     if (category === undefined) {
       return products;
     }
-    // return products.filter((item) => item.category === category);
-    const categoryProducts = products.filter(
-      (item) => item.category === category
-    );
-    return categoryProducts.lenght === 0 ? categoryProducts : "... is empty";
+    return products.filter((item) => item.category === category);
   });
-  // console.log(products);
+
+  // const products = useSelector(({ products }) => {
+  //   if (category === undefined) {
+  //     return products;
+  //   }
+  //   const categoryProducts = products.filter(
+  //     (item) => item.category === category
+  //   );
+  //   return categoryProducts.length === 0 ? "... is empty" : categoryProducts;
+  // });
+
   return (
     <>
       <ProductsFilterBar />
-      {/* <h4>{category ? category : "All Products"}</h4> */}
+      <h4>{category ? `Category: ${category}` : `Category: all products`}</h4>
       <div className={s.product_container}>
-        {products
-          .filter((item) => item.show)
-          .map((item) => (
-            <ProductItem key={item.id} {...item} />
-          ))}
+        {/* {products.length === 0 ? ( */}
+        {products.length === 0 || products.every((item) => !item.show) ? (
+          <p className={s.empty}>... no products in this category 😔 ...</p>
+        ) : (
+          products
+            .filter((item) => item.show)
+            .map((item) => <ProductItem key={item.id} {...item} />)
+        )}
       </div>
     </>
   );

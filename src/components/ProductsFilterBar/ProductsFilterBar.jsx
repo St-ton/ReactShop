@@ -11,7 +11,7 @@ import s from "./ProductsFilterBar.module.css";
 export default function ProductsFilterBar() {
   const dispatch = useDispatch();
   const categories = useSelector((store) => store.categories);
-  const [selectedCategory, setSelectedCategory] = useState("All Products");
+  const [selectedCategory, setSelectedCategory] = useState("all products");
 
   const searchOnChange = (event) => {
     dispatch(productsSearchFilterAction(event.target.value));
@@ -32,6 +32,7 @@ export default function ProductsFilterBar() {
           event.target.value
         : "all products"
     );
+    console.log(event.target.value);
     dispatch(categoryFilterAction(event.target.value));
     // const newItem = item.charAt(0).toUpperCase() + item.slice(1);
   };
@@ -45,7 +46,7 @@ export default function ProductsFilterBar() {
           }}
         >
           <option selected disabled value="">
-            Category
+            Filter:
           </option>
           {categories.map((item) => (
             <option key={item} value={item}>
@@ -70,7 +71,7 @@ export default function ProductsFilterBar() {
           <option value="name-za">Sort Z-A</option>
         </select>
       </div>
-      <h4>Category: {selectedCategory}</h4>
+      {/* <h4>Filter: {selectedCategory}</h4> */}
     </>
   );
 }

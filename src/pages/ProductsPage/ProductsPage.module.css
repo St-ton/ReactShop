@@ -13,3 +13,9 @@ h4 {
   /* display: flex; */
   /* justify-content: flex-start; */
 }
+
+.empty {
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}

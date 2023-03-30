@@ -20,11 +20,12 @@ export const BasketPage = () => {
       ) : (
         <>
           <div className={s.basket_container}>
+            <h1>Basket</h1>
             {data.map((item) => (
               <BasketItem key={item.id} {...item} />
             ))}
           </div>
-          <BasketCalculation />          
+          <BasketCalculation />
         </>
       )}
     </div>

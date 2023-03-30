@@ -1,5 +1,5 @@
 .link {
-  padding: 5px 20px;
+  padding: 5px 40px;  
   border: 2px solid white;
   color: white;
   text-decoration: none;
@@ -9,7 +9,6 @@
 .link[data-count]::after {
   content: attr(data-count);
   position: absolute;
-
   padding: 2px;
   transform: translate(50%, 50%);
   min-width: 15px;

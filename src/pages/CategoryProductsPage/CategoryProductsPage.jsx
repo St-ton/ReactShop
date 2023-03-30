@@ -12,14 +12,10 @@ export default function CategoryProductsPage() {
 
   return (
     <>
-      <div>Категория:{category}</div>
+      <div>Category:{category}</div>
       {products.map((item) => (
         <ProductItem key={item.id} {...item} />
       ))}
     </>
   );
 }
-
-//todo 1) считать все продукты и оставить только те, у которых категория соответствует указанной в URL
-//todo 2) пройтись мапом по получившемуся массиву и вывести карточки продуктов
-//todo НЕ ДЕЛАЕМ ДОПОЛНИТЕЛЬНЫХ СЕТЕВЫХ ЗАПРОСОВ

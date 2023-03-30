@@ -22,9 +22,9 @@ export default function BasketCalculation() {
     if (basket.length !== 0) {
       return (
         <div className={s.container}>
-          <span>Total Count:</span>
+          <span className={s.count}>Total Count:</span>
           <p>{totalCount}</p>
-          <span>Total Summa:</span>
+          <span className={s.sum}>Total Summa:</span>
           <p> {totalSumm}</p>
           <button onClick={() => dispatch(basketClearAction())}>Clear</button>
         </div>
@@ -32,7 +32,7 @@ export default function BasketCalculation() {
     } else {
       return (
         <div className={s.container_leer}>
-          <p>Basket leer...</p>
+          <p>... is empty 😔</p>
         </div>
       );
     }

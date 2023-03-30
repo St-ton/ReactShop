@@ -6,9 +6,7 @@ export const CategoryItem = ({ item }) => {
   const link = `category/${item}`;
   return (
     <div className={s.category_item}>
-      <Link to={link}>{item}</Link>
+      <Link to={link}>{item.charAt(0).toUpperCase() + item.slice(1)}</Link>
     </div>
   );
 };
-
-// todo доработать CategoryItem и обернуть его в Link при нажатии на Link должен быть переход на страницу с продуктами соответствующей категории

@@ -9,7 +9,7 @@ export const CategoriesPage = () => {
 
   return (
     <div className={s.categories_page}>
-      <h1>The best shop for the best things</h1>
+      <h1>The Best Shop For The Best Things</h1>
       <div className={s.categories_container}>
         {categories.map((item) => (
           <CategoryItem key={item} item={item} />

@@ -2,13 +2,16 @@
   max-width: 1000px;
   margin: 0px auto;
 }
+
 .categories_page h1 {
   text-align: center;
   box-shadow: 0 0 20px gray;
   color: #34495e;
-  padding: 5px;
+  padding: 10px;
   border: 2px solid #34495e;
   border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .categories_container {
@@ -17,5 +20,5 @@
   grid-auto-rows: 50px;
   /* gap: 40px 90px; */
   gap: 25px;
-  margin: 50px 0;
+  margin: 20px 0;
 }

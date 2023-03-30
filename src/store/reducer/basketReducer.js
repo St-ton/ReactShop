@@ -72,13 +72,3 @@ export const basketReducer = (state = defaultState, action) => {
 
   return state;
 };
-
-//todo 1) создать reducer BasketReducer
-//todo 2) подключить его к state
-//todo 3) указаь значение по умолчанию
-//
-//[
-//    {id: 1, count: 3},
-//    {id: 2, count: 5}
-//]
-// todo 4) на странцие корзины вывести в параграфах id и count

@@ -17,8 +17,10 @@
   justify-content: center;
   align-items: center;
 }
+
 .container p,
-span {
+.container .count,
+.container .sum {
   margin-left: 20px;
 }
 

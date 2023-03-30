@@ -24,7 +24,7 @@ export default function ProductsPage() {
   return (
     <>
       <ProductsFilterBar />
-      <h4>Category: {category ? category : "All Products"}</h4>
+      {/* <h4>{category ? category : "All Products"}</h4> */}
       <div className={s.product_container}>
         {products
           .filter((item) => item.show)

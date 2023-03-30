@@ -4,3 +4,11 @@
   display: grid;
   gap: 10px;
 }
+
+.basket_container h1 {
+  text-align: center;
+  box-shadow: 0 0 20px gray;
+  color: #34495e;
+  border: 2px solid #34495e;
+  border-radius: 5px;
+}

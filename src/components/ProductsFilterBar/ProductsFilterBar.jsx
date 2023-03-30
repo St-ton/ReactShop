@@ -28,21 +28,13 @@ export default function ProductsFilterBar() {
   const categoryOnChange = (event) => {
     setSelectedCategory(
       event.target.value
-        ? event.target.value.charAt(0).toUpperCase() +
-            event.target.value.slice(1)
-        : "All Products"
+        ? // event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1)
+          event.target.value
+        : "all products"
     );
     dispatch(categoryFilterAction(event.target.value));
+    // const newItem = item.charAt(0).toUpperCase() + item.slice(1);
   };
-
-  // const categoryOnChange = (event) => {
-  //   dispatch(categoryFilterAction(event.target.value));
-  // };
-
-  // const category = categoryOnChange;
-  // const selectedCategory = () => {
-  //   return category !== "" ? category : "All Products";
-  // };
 
   return (
     <>
@@ -57,7 +49,8 @@ export default function ProductsFilterBar() {
           </option>
           {categories.map((item) => (
             <option key={item} value={item}>
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {/* {newItem} */}
+              {item}
             </option>
           ))}
         </select>

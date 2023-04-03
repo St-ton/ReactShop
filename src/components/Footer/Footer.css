@@ -8,12 +8,16 @@
 } */
 
 .wrapper {
-  height: 50px;
+  height: 40px;
   display: flex;
   justify-content: center;
   gap: 200px;
   align-items: center;
   background-color: #34495e;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .nav a {

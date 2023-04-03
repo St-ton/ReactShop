@@ -1,7 +1,7 @@
 {
-  "name": "reactshop",
+  "name": "thebestshop",
   "version": "0.1.0",
-  "homepage": "https://St-ton.github.io/reactshop",
+  "homepage": "https://St-ton.github.io/thebestshop",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import BasketCalculation from "../../components/BasketCalculation/BasketCalculation";
-
 import BasketItem from "../../components/BasketItem/BasketItem";
 import s from "./BasketPage.module.css";
 
@@ -13,10 +12,14 @@ export const BasketPage = () => {
     return { ...item, ...product };
   });
 
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(basket));
+  }, [basket]);
+
   return (
     <div>
       {products.length === 0 ? (
-        <p>Basket Loading...</p>
+        <p className={s.default}>Basket Loading...</p>
       ) : (
         <>
           <div className={s.basket_container}>

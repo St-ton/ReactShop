@@ -35,6 +35,11 @@ export default function ProductsPage() {
     <>
       <ProductsFilterBar />
       <h4>{category ? `Category: ${category}` : `Category: all products`}</h4>
+      {/* <h4>
+        {category
+          ? `Category: ${setSelectedCategory}`
+          : `Category: all products`}
+      </h4> */}
       <div className={s.product_container}>
         {/* {products.length === 0 ? ( */}
         {products.length === 0 || products.every((item) => !item.show) ? (

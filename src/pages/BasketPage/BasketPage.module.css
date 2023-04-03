@@ -1,5 +1,5 @@
 .basket_container {
-  max-width: 900px;
+  max-width: 700px;
   margin: 10px auto;
   display: grid;
   gap: 10px;
@@ -11,4 +11,10 @@
   color: #34495e;
   border: 2px solid #34495e;
   border-radius: 5px;
+}
+
+.default {
+  text-align: center;
+  font-size: 24px;
+  color: red;
 }

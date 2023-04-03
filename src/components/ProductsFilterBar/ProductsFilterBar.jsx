@@ -32,7 +32,7 @@ export default function ProductsFilterBar() {
           event.target.value
         : "all products"
     );
-    console.log(event.target.value);
+
     dispatch(categoryFilterAction(event.target.value));
     // const newItem = item.charAt(0).toUpperCase() + item.slice(1);
   };
